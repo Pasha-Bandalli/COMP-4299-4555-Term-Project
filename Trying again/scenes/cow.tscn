@@ -1,0 +1,52 @@
+[gd_scene load_steps=8 format=3 uid="uid://rf48ca8j3h00"]
+
+[ext_resource type="Texture2D" uid="uid://bijbru86p6oux" path="res://Sprout Lands - Sprites - Basic pack/Characters/Free Cow Sprites.png" id="1_ntmsx"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_r0roh"]
+atlas = ExtResource("1_ntmsx")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_hlwv0"]
+atlas = ExtResource("1_ntmsx")
+region = Rect2(32, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_6fk2a"]
+atlas = ExtResource("1_ntmsx")
+region = Rect2(64, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_a7rry"]
+atlas = ExtResource("1_ntmsx")
+region = Rect2(32, 32, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_a4u3h"]
+atlas = ExtResource("1_ntmsx")
+region = Rect2(0, 32, 32, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_3yjyt"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_r0roh")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_hlwv0")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_6fk2a")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_a7rry")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_a4u3h")
+}],
+"loop": true,
+"name": &"cow_idle",
+"speed": 5.0
+}]
+
+[node name="cow" type="AnimatedSprite2D"]
+position = Vector2(-6.10352e-05, 76.0963)
+sprite_frames = SubResource("SpriteFrames_3yjyt")
+animation = &"cow_idle"
+frame_progress = 0.569783

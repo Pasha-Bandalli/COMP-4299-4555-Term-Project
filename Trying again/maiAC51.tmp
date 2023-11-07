@@ -1,0 +1,24 @@
+[gd_scene load_steps=5 format=3 uid="uid://b4xgcms2pbol7"]
+
+[ext_resource type="PackedScene" uid="uid://0gr5kng5xcrx" path="res://scenes/main_scene.tscn" id="1_wtepp"]
+[ext_resource type="PackedScene" uid="uid://ltijqt3gyiyq" path="res://chicken.tscn" id="2_6ui4r"]
+[ext_resource type="Script" path="res://player.gd" id="3_e4joj"]
+[ext_resource type="PackedScene" uid="uid://rf48ca8j3h00" path="res://scenes/cow.tscn" id="3_offog"]
+
+[node name="Node2D" type="Node2D"]
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2(424, 400)
+scale = Vector2(0.941644, 0.946169)
+
+[node name="main_scene" parent="Camera2D" instance=ExtResource("1_wtepp")]
+
+[node name="cow" parent="Camera2D" instance=ExtResource("3_offog")]
+
+[node name="player" type="Area2D" parent="."]
+script = ExtResource("3_e4joj")
+metadata/_edit_group_ = true
+
+[node name="chicken" parent="player" instance=ExtResource("2_6ui4r")]
+position = Vector2(424, 400)
+scale = Vector2(0.941644, 0.946169)

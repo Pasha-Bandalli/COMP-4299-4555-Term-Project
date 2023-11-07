@@ -1,0 +1,33 @@
+[gd_scene load_steps=8 format=3 uid="uid://b4xgcms2pbol7"]
+
+[ext_resource type="Script" path="res://main_scene.gd" id="1_l31gs"]
+[ext_resource type="PackedScene" uid="uid://0gr5kng5xcrx" path="res://scenes/main_scene.tscn" id="1_wtepp"]
+[ext_resource type="PackedScene" uid="uid://ltijqt3gyiyq" path="res://scenes/chicken.tscn" id="2_6ui4r"]
+[ext_resource type="PackedScene" uid="uid://rf48ca8j3h00" path="res://scenes/cow.tscn" id="3_offog"]
+[ext_resource type="Script" path="res://scenes/cow.gd" id="4_ph0o4"]
+[ext_resource type="Script" path="res://scenes/chicken.gd" id="5_6al2y"]
+[ext_resource type="Script" path="res://RigidBody2D.gd" id="5_lawnc"]
+
+[node name="Node2D" type="Node2D"]
+script = ExtResource("1_l31gs")
+
+[node name="main_scene" parent="." instance=ExtResource("1_wtepp")]
+position = Vector2(288, 136)
+scale = Vector2(0.999998, 0.72)
+
+[node name="chicken" parent="main_scene" instance=ExtResource("2_6ui4r")]
+position = Vector2(136, 366.667)
+scale = Vector2(0.941646, 1.31412)
+script = ExtResource("5_6al2y")
+
+[node name="cow" parent="main_scene" instance=ExtResource("3_offog")]
+position = Vector2(136, 466.667)
+scale = Vector2(0.941646, 1.31412)
+script = ExtResource("4_ph0o4")
+
+[node name="RigidBody2D2" type="RigidBody2D" parent="."]
+position = Vector2(-3.05176e-05, -6.10352e-05)
+scale = Vector2(1, 1)
+script = ExtResource("5_lawnc")
+
+[node name="NavigationLink2D" type="NavigationLink2D" parent="."]
